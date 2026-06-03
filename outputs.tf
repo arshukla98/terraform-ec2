@@ -18,3 +18,7 @@ output "region" {
   value       = var.aws_region
 }
 
+output "instance_names" {
+  description = "Names of the EC2 instances (from Name tag)"
+  value       = aws_instance.web_server[*].tags["Name"]
+}
