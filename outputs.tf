@@ -18,8 +18,3 @@ output "region" {
   value       = var.aws_region
 }
 
-# THIS OUTPUT WILL FAIL - instance_name is not an attribute of aws_instance
-output "instance_names" {
-  description = "Names of the EC2 instances"
-  value       = aws_instance.web_server[*].instance_name
-}
